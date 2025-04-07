@@ -6,6 +6,7 @@
     sessionVariables = {
       PS1 = "\\[\\e[0;32m\\]\\w\\[\\e[0m\\] \\[\\e[0;97m\\]\$\\[\\e[0m\\] ";
       NIX_PATH = "nixpkgs=flake:nixpkgs";
+      DIRENV_LOG_FORMAT = "";
     };
     shellAliases = {
       ls = "ls --color=auto";
