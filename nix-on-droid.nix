@@ -29,6 +29,8 @@
     gawk
     comma
     nix-index
+    openssh
+    nixpkgs-fmt
   ];
 
   environment.etcBackupExtension = ".bak";

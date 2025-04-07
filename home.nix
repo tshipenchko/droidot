@@ -16,7 +16,28 @@
     };
     profileExtra = ''
       eval "$(dircolors -b)"
+      eval "$(ssh-agent -s -t 10m)"
+      trap "kill $SSH_AGENT_PID" EXIT
     '';
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Łukasz Tshipenchko";
+    userEmail = "dev@zxc.sx";
+    extraConfig = {
+      init.defaultBranch = "master";
+    };
+    ignores = [ ".envrc" ".direnv" ];
+    aliases = {
+      pp = "!git pull && git push";
+    };
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
   };
 
   home.file."tmp".source = config.lib.file.mkOutOfStoreSymlink "/sdcard/_tmp";
