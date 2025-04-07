@@ -16,6 +16,7 @@
       pkgs = import nixpkgs { system = "aarch64-linux"; };
       modules = [
         (import ./nix-on-droid.nix { inputs = inputs; })
+        ./ssh.nix
       ];
     };
 
