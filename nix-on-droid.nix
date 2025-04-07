@@ -27,6 +27,8 @@
     curl
     lynx
     gawk
+    comma
+    nix-index
   ];
 
   environment.etcBackupExtension = ".bak";
