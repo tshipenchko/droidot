@@ -18,7 +18,7 @@
     profileExtra = ''
       eval "$(dircolors -b)"
       eval "$(ssh-agent -s -t 10m)"
-      trap "kill $SSH_AGENT_PID" EXIT
+      trap 'eval "$(ssh-agent -k)"' EXIT
     '';
   };
 
