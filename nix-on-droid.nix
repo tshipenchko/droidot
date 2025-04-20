@@ -74,6 +74,7 @@
     rustup
     go
     gofumpt
+    bc
   ];
 
   environment.etcBackupExtension = ".bak";
