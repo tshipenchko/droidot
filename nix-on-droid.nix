@@ -6,6 +6,7 @@
     nano
     procps
     killall
+    ncurses
     diffutils
     findutils
     utillinux
