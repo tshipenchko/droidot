@@ -61,6 +61,7 @@
     calc
     postgresql
     net-snmp
+    imagemagick
 
     python3
     pypy3
